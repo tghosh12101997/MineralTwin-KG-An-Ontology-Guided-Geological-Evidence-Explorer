@@ -65,7 +65,7 @@ The overview reports pipeline readiness, dataset coverage and the main semantic 
 
 The deposit explorer filters the Australian compilation by commodity, state, province and search term. It links map locations to structured deposit records, host-rock data, alteration assemblages and associated igneous rocks.
 
-![Deposit Explorer](img/Deposit-explorer.jpg)
+![Deposit Explorer](img/Deposit explorer.jpg)
 
 ### Geological Evidence Search
 
@@ -77,13 +77,13 @@ Evidence search retrieves relevant report passages and shows the structured clai
 
 The workbench reports graph statistics, RDF type distributions and resource neighbourhoods, and supports read-only SPARQL competency queries.
 
-![Knowledge Graph Workbench](img/knowledge-graph.jpg)
+![Knowledge Graph Workbench](img/Knowledge-graph.jpg)
 
 ### Human review queue
 
 Low-confidence claims are not silently promoted into accepted geological knowledge. They are routed to a review queue where a reviewer can accept, reject or escalate them to a domain expert.
 
-![Claim Review Queue](img/claim-review.jpg)
+![Claim Review Queue](img/Claim-Review.jpg)
 
 ### Conceptual 3D model inputs
 
