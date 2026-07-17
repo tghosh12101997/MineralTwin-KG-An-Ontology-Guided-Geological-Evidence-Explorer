@@ -1,0 +1,53 @@
+@prefix mt: <https://w3id.org/mineraltwin/ontology/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mt:MineralDepositShape a sh:NodeShape ;
+    sh:targetClass mt:MineralDeposit ; sh:closed false ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ] ;
+    sh:property [ sh:path geo:hasGeometry ; sh:minCount 1 ; sh:maxCount 1 ; sh:class geo:Geometry ] ;
+    sh:property [ sh:path mt:containsCommodity ; sh:minCount 1 ; sh:class mt:Commodity ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:class mt:EvidenceSource ] .
+
+mt:GeometryShape a sh:NodeShape ;
+    sh:targetClass geo:Geometry ;
+    sh:property [ sh:path geo:asWKT ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype geo:wktLiteral ; sh:pattern "^POINT\\s*\\(" ] .
+
+mt:CommodityShape a sh:NodeShape ;
+    sh:targetClass mt:Commodity ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mt:commodityCode ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+mt:HostRockShape a sh:NodeShape ;
+    sh:targetClass mt:GeologicalUnit ;
+    sh:or (
+        [ sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:datatype xsd:string ] ]
+        [ sh:property [ sh:path mt:hasLithology ; sh:minCount 1 ; sh:class mt:Lithology ] ]
+    ) .
+
+mt:EvidenceDocumentShape a sh:NodeShape ;
+    sh:targetClass mt:EvidenceDocument ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mt:documentFilename ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+mt:ReportPassageShape a sh:NodeShape ;
+    sh:targetClass mt:ReportPassage ;
+    sh:property [ sh:path mt:pageNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path mt:passageText ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 20 ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mt:EvidenceDocument ] .
+
+mt:ExtractedClaimShape a sh:NodeShape ;
+    sh:targetClass mt:ExtractedClaim ;
+    sh:property [ sh:path mt:claimSubject ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path mt:claimPredicate ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path mt:claimObject ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path mt:confidenceScore ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:maxInclusive 1 ] ;
+    sh:property [ sh:path mt:sourceText ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 20 ] ;
+    sh:property [ sh:path mt:supportedByPassage ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mt:ReportPassage ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mt:ReportPassage ] ;
+    sh:property [ sh:path mt:extractionMethod ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mt:reviewStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .

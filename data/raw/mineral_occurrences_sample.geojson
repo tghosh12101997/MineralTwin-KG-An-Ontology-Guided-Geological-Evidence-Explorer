@@ -1,0 +1,339 @@
+{
+    "numberMatched":17074,
+    "type":"FeatureCollection",
+    "features":[
+        {
+            "type":"Feature",
+            "geometry":{
+                "type":"Point",
+                "coordinates":[
+                    150.29,
+                    -34.03
+                ]
+            },
+            "properties":{
+                "name":"Brimstone No1 Colliery",
+                "occurrence_type":"deposit",
+                "country":"Australia",
+                "state":"New South Wales",
+                "location_description":null,
+                "alternate_names":null,
+                "longitude_gda94":150.29,
+                "latitude_gda94":-34.03,
+                "commodities":null,
+                "associated_companies":null,
+                "provinces":null,
+                "maxagename":null,
+                "minagename":null,
+                "child_occurrences":null,
+                "resources":null,
+                "samples":null,
+                "stratigraphy":null
+            },
+            "id":18644
+        },
+        {
+            "type":"Feature",
+            "geometry":{
+                "type":"Point",
+                "coordinates":[
+                    150.59,
+                    -34.15
+                ]
+            },
+            "properties":{
+                "name":"Coal Cliff Colliery",
+                "occurrence_type":"deposit",
+                "country":"Australia",
+                "state":"New South Wales",
+                "location_description":null,
+                "alternate_names":null,
+                "longitude_gda94":150.59,
+                "latitude_gda94":-34.15,
+                "commodities":null,
+                "associated_companies":null,
+                "provinces":null,
+                "maxagename":null,
+                "minagename":null,
+                "child_occurrences":null,
+                "resources":null,
+                "samples":null,
+                "stratigraphy":null
+            },
+            "id":18648
+        },
+        {
+            "type":"Feature",
+            "geometry":{
+                "type":"Point",
+                "coordinates":[
+                    147.0912474344,
+                    -36.1154008532
+                ]
+            },
+            "properties":{
+                "name":"Bethanga",
+                "occurrence_type":"deposit",
+                "country":"Australia",
+                "state":"Victoria",
+                "location_description":null,
+                "alternate_names":null,
+                "longitude_gda94":147.0912,
+                "latitude_gda94":-36.1154,
+                "commodities":"Gold, Copper",
+                "associated_companies":null,
+                "provinces":"Lachlan Orogen, Lachlan Orogen, Adelong Gold Metallogenic Province",
+                "maxagename":"Upper Ordovician",
+                "minagename":"Upper Ordovician",
+                "child_occurrences":"Y",
+                "resources":null,
+                "samples":null,
+                "stratigraphy":"Y"
+            },
+            "id":333286
+        },
+        {
+            "type":"Feature",
+            "geometry":{
+                "type":"Point",
+                "coordinates":[
+                    125.9680108416,
+                    -18.7108543496
+                ]
+            },
+            "properties":{
+                "name":"Cadjebut",
+                "occurrence_type":"deposit",
+                "country":"Australia",
+                "state":"Western Australia",
+                "location_description":null,
+                "alternate_names":"East Pillara, Pinnacles",
+                "longitude_gda94":125.968,
+                "latitude_gda94":-18.7109,
+                "commodities":"Zinc, Lead, Silver",
+                "associated_companies":"Meridian Minerals Ltd",
+                "provinces":"Canning Basin, Lennard Shelf",
+                "maxagename":"Late Paleozoic",
+                "minagename":"Late Paleozoic",
+                "child_occurrences":"Y",
+                "resources":null,
+                "samples":"Y",
+                "stratigraphy":"Y"
+            },
+            "id":333287
+        },
+        {
+            "type":"Feature",
+            "geometry":{
+                "type":"Point",
+                "coordinates":[
+                    140.6623573675,
+                    -31.740963873
+                ]
+            },
+            "properties":{
+                "name":"Honeymoon",
+                "occurrence_type":"deposit",
+                "country":"Australia",
+                "state":"South Australia",
+                "location_description":null,
+                "alternate_names":null,
+                "longitude_gda94":140.6624,
+                "latitude_gda94":-31.741,
+                "commodities":"Uranium, (Uranium oxide)",
+                "associated_companies":"Boss Resources Ltd",
+                "provinces":"Lake Eyre Basin, Callabonna Sub-basin",
+                "maxagename":"Cenozoic",
+                "minagename":"Cenozoic",
+                "child_occurrences":"Y",
+                "resources":null,
+                "samples":null,
+                "stratigraphy":"Y"
+            },
+            "id":333288
+        },
+        {
+            "type":"Feature",
+            "geometry":{
+                "type":"Point",
+                "coordinates":[
+                    118.1385991313,
+                    -22.6354557836
+                ]
+            },
+            "properties":{
+                "name":"Hamersley Iron - Marandoo",
+                "occurrence_type":"deposit",
+                "country":"Australia",
+                "state":"Western Australia",
+                "location_description":null,
+                "alternate_names":null,
+                "longitude_gda94":118.1386,
+                "latitude_gda94":-22.6355,
+                "commodities":"Iron, Iron ore",
+                "associated_companies":"Rio Tinto Limited, HIsmelt",
+                "provinces":"Hamersley Basin",
+                "maxagename":"Precambrian",
+                "minagename":"Precambrian",
+                "child_occurrences":null,
+                "resources":null,
+                "samples":null,
+                "stratigraphy":"Y"
+            },
+            "id":333289
+        },
+        {
+            "type":"Feature",
+            "geometry":{
+                "type":"Point",
+                "coordinates":[
+                    137.172005,
+                    -31.449941
+                ]
+            },
+            "properties":{
+                "name":"Elizabeth Creek",
+                "occurrence_type":"deposit",
+                "country":"Australia",
+                "state":"South Australia",
+                "location_description":null,
+                "alternate_names":"Cattle Grid, Elizabeth Creek, Emmie Bluff, Mount Gunson, Windabout",
+                "longitude_gda94":137.172,
+                "latitude_gda94":-31.4499,
+                "commodities":"Copper, Cobalt, (Silver)",
+                "associated_companies":"Coda Minerals Ltd",
+                "provinces":"Stuart Shelf",
+                "maxagename":"Neoproterozoic",
+                "minagename":"Neoproterozoic",
+                "child_occurrences":"Y",
+                "resources":null,
+                "samples":null,
+                "stratigraphy":"Y"
+            },
+            "id":333290
+        },
+        {
+            "type":"Feature",
+            "geometry":{
+                "type":"Point",
+                "coordinates":[
+                    145.864,
+                    -31.5403
+                ]
+            },
+            "properties":{
+                "name":"New Occidental",
+                "occurrence_type":"deposit",
+                "country":"Australia",
+                "state":"New South Wales",
+                "location_description":null,
+                "alternate_names":"Occidental, Peak Mines Project",
+                "longitude_gda94":145.864,
+                "latitude_gda94":-31.5403,
+                "commodities":"Gold, Copper",
+                "associated_companies":"New Gold Incorporated, Goldcorp",
+                "provinces":"Lachlan Orogen, Lachlan Orogen, Cobar Basin",
+                "maxagename":"Lower Devonian",
+                "minagename":"Lower Devonian",
+                "child_occurrences":"Y",
+                "resources":null,
+                "samples":null,
+                "stratigraphy":"Y"
+            },
+            "id":333291
+        },
+        {
+            "type":"Feature",
+            "geometry":{
+                "type":"Point",
+                "coordinates":[
+                    143.466504377,
+                    -15.8771151877
+                ]
+            },
+            "properties":{
+                "name":"Palmer River",
+                "occurrence_type":"deposit",
+                "country":"Australia",
+                "state":"Queensland",
+                "location_description":null,
+                "alternate_names":"Maytown, Palmer",
+                "longitude_gda94":143.4665,
+                "latitude_gda94":-15.8771,
+                "commodities":"Gold",
+                "associated_companies":null,
+                "provinces":"Coen Metallogenic Province, Etheridge Province",
+                "maxagename":"Cenozoic",
+                "minagename":"Cenozoic",
+                "child_occurrences":"Y",
+                "resources":null,
+                "samples":null,
+                "stratigraphy":"Y"
+            },
+            "id":333292
+        },
+        {
+            "type":"Feature",
+            "geometry":{
+                "type":"Point",
+                "coordinates":[
+                    133.9200055477,
+                    -23.877110336
+                ]
+            },
+            "properties":{
+                "name":"Pamela",
+                "occurrence_type":"deposit",
+                "country":"Australia",
+                "state":"Northern Territory",
+                "location_description":null,
+                "alternate_names":null,
+                "longitude_gda94":133.92,
+                "latitude_gda94":-23.8771,
+                "commodities":"Uranium",
+                "associated_companies":null,
+                "provinces":"Amadeus Basin",
+                "maxagename":"Carboniferous",
+                "minagename":"Carboniferous",
+                "child_occurrences":"Y",
+                "resources":null,
+                "samples":null,
+                "stratigraphy":"Y"
+            },
+            "id":333293
+        }
+    ],
+    "links":[
+        {
+            "type":"application/geo+json",
+            "rel":"self",
+            "title":"This document as GeoJSON",
+            "href":"https://linkeddata.pid.geoscience.gov.au/collections/mo/items?f=json"
+        },
+        {
+            "rel":"alternate",
+            "type":"application/ld+json",
+            "title":"This document as RDF (JSON-LD)",
+            "href":"https://linkeddata.pid.geoscience.gov.au/collections/mo/items?f=jsonld"
+        },
+        {
+            "type":"text/html",
+            "rel":"alternate",
+            "title":"This document as HTML",
+            "href":"https://linkeddata.pid.geoscience.gov.au/collections/mo/items?f=html"
+        },
+        {
+            "type":"application/geo+json",
+            "rel":"next",
+            "title":"Items (next)",
+            "href":"https://linkeddata.pid.geoscience.gov.au/collections/mo/items?offset=10"
+        },
+        {
+            "type":"application/json",
+            "title":"Mineral Occurrence",
+            "rel":"collection",
+            "href":"https://linkeddata.pid.geoscience.gov.au/collections/mo"
+        }
+    ],
+    "timeStamp":"2026-07-17T17:06:22.742646Z"
+}

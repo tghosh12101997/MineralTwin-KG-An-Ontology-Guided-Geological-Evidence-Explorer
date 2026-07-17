@@ -1,0 +1,7 @@
+PREFIX mt: <https://w3id.org/mineraltwin/ontology/>
+SELECT ?entityType (COUNT(DISTINCT ?entity) AS ?count)
+WHERE {
+  ?entity mt:entityType ?entityType .
+}
+GROUP BY ?entityType
+ORDER BY DESC(?count)

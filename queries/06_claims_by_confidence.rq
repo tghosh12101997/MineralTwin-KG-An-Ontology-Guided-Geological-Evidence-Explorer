@@ -1,0 +1,15 @@
+PREFIX mt: <https://w3id.org/mineraltwin/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?claim ?subjectLabel ?predicate ?objectLabel ?confidence ?status
+WHERE {
+  ?claim a mt:ExtractedClaim ;
+         mt:claimSubject ?subject ;
+         mt:claimPredicate ?predicate ;
+         mt:claimObject ?object ;
+         mt:confidenceScore ?confidence ;
+         mt:reviewStatus ?status .
+  OPTIONAL { ?subject rdfs:label ?subjectLabel }
+  OPTIONAL { ?object rdfs:label ?objectLabel }
+}
+ORDER BY DESC(?confidence)
+LIMIT 100

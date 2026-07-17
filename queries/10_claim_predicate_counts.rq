@@ -1,0 +1,7 @@
+PREFIX mt: <https://w3id.org/mineraltwin/ontology/>
+SELECT ?predicate (COUNT(?claim) AS ?claimCount)
+WHERE {
+  ?claim a mt:ExtractedClaim ; mt:claimPredicate ?predicate .
+}
+GROUP BY ?predicate
+ORDER BY DESC(?claimCount)

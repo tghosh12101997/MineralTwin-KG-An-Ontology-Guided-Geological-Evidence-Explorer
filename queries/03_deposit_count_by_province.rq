@@ -1,0 +1,11 @@
+PREFIX mt: <https://w3id.org/mineraltwin/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?provinceName (COUNT(DISTINCT ?deposit) AS ?depositCount)
+WHERE {
+  ?deposit a mt:MineralDeposit ;
+           mt:locatedInProvince ?province .
+  ?province rdfs:label ?provinceName .
+}
+GROUP BY ?provinceName
+ORDER BY DESC(?depositCount) ?provinceName

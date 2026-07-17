@@ -1,0 +1,11 @@
+PREFIX mt: <https://w3id.org/mineraltwin/ontology/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?documentTitle ?page ?passageText ?claim ?confidence
+WHERE {
+  ?claim a mt:ExtractedClaim ; mt:confidenceScore ?confidence ; mt:supportedByPassage ?passage .
+  ?passage mt:pageNumber ?page ; mt:passageText ?passageText ; prov:wasDerivedFrom ?document .
+  ?document rdfs:label ?documentTitle .
+}
+ORDER BY ?documentTitle ?page DESC(?confidence)
+LIMIT 100

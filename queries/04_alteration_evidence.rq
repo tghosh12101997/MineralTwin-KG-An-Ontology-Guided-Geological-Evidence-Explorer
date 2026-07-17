@@ -1,0 +1,12 @@
+PREFIX mt: <https://w3id.org/mineraltwin/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?depositName ?scope ?alterationDescription
+WHERE {
+  ?deposit a mt:MineralDeposit ;
+           rdfs:label ?depositName ;
+           mt:hasAlteration ?alteration .
+  ?alteration rdfs:label ?alterationDescription .
+  OPTIONAL { ?alteration mt:alterationScope ?scope . }
+}
+ORDER BY ?depositName ?scope

@@ -1,0 +1,12 @@
+PREFIX mt: <https://w3id.org/mineraltwin/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?deposit ?depositName ?commodityName
+WHERE {
+  ?deposit a mt:MineralDeposit ;
+           rdfs:label ?depositName ;
+           mt:containsCommodity ?commodity .
+  ?commodity mt:commodityCode "Li" ;
+             rdfs:label ?commodityName .
+}
+ORDER BY ?depositName

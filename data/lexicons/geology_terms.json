@@ -1,0 +1,43 @@
+{
+  "LITHOLOGY": [
+    "pegmatite", "granite", "monzogranite", "granodiorite", "tonalite", "diorite",
+    "basalt", "dolerite", "gabbro", "greenstone", "schist", "gneiss", "amphibolite",
+    "quartzite", "sandstone", "shale", "siltstone", "limestone", "dolostone",
+    "conglomerate", "rhyolite", "dacite", "andesite", "felsic volcanic rock",
+    "mafic volcanic rock", "ultramafic rock", "komatiite", "metasedimentary rock",
+    "metavolcanic rock", "iron formation", "banded iron formation"
+  ],
+  "STRUCTURE": [
+    "fault", "fault zone", "shear zone", "shear", "contact", "geological contact",
+    "fold", "fracture", "joint", "vein", "vein system", "dyke", "dike",
+    "lineament", "unconformity", "anticline", "syncline", "thrust", "thrust fault",
+    "detachment", "structural corridor", "deformation zone"
+  ],
+  "ALTERATION": [
+    "sericitic alteration", "sericite alteration", "potassic alteration",
+    "chloritic alteration", "chlorite alteration", "silicification", "albitization",
+    "albitisation", "greisenization", "greisenisation", "hematite alteration",
+    "carbonate alteration", "muscovite alteration", "tourmalinization",
+    "tourmalinisation", "hydrothermal alteration", "propylitic alteration",
+    "argillic alteration", "sodic alteration", "calc-silicate alteration",
+    "metasomatism", "alteration halo"
+  ],
+  "MINERAL": [
+    "spodumene", "lepidolite", "petalite", "amblygonite", "muscovite", "quartz",
+    "feldspar", "albite", "microcline", "cassiterite", "columbite", "tantalite",
+    "columbite-tantalite", "chalcopyrite", "pyrite", "pyrrhotite", "pentlandite",
+    "magnetite", "hematite", "sphalerite", "galena", "molybdenite", "scheelite",
+    "wolframite", "monazite", "bastnasite", "bastnäsite", "uraninite", "gold"
+  ],
+  "COMMODITY": [
+    "lithium", "nickel", "copper", "cobalt", "gold", "tantalum", "tin",
+    "rare earth elements", "rare-earth elements", "REE", "silver", "zinc", "lead",
+    "molybdenum", "tungsten", "uranium", "beryllium"
+  ],
+  "MINERALIZATION": [
+    "mineralisation", "mineralization", "lithium mineralisation",
+    "lithium mineralization", "nickel mineralisation", "nickel mineralization",
+    "copper mineralisation", "copper mineralization", "orebody", "ore body",
+    "ore zone", "mineralized zone", "mineralised zone", "lode", "deposit"
+  ]
+}

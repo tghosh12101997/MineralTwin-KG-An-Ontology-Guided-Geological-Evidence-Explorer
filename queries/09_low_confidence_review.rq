@@ -1,0 +1,11 @@
+PREFIX mt: <https://w3id.org/mineraltwin/ontology/>
+SELECT ?claim ?confidence ?sourceText ?method
+WHERE {
+  ?claim a mt:ExtractedClaim ;
+         mt:confidenceScore ?confidence ;
+         mt:sourceText ?sourceText ;
+         mt:extractionMethod ?method .
+  FILTER (?confidence < 0.85)
+}
+ORDER BY ?confidence
+LIMIT 100

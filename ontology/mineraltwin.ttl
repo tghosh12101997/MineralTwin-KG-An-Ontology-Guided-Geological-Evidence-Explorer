@@ -1,0 +1,87 @@
+@prefix mt: <https://w3id.org/mineraltwin/ontology/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mt: a owl:Ontology ;
+    dcterms:title "MineralTwin-KG ontology"@en ;
+    dcterms:description "Ontology for mineral deposits, geological evidence, report-derived claims, provenance and digital-twin model links."@en ;
+    owl:versionInfo "0.3.0" .
+
+# Core geological entities
+mt:GeologicalEntity a owl:Class ; rdfs:label "Geological entity"@en .
+mt:MineralDeposit a owl:Class ; rdfs:label "Mineral deposit"@en ; rdfs:subClassOf geo:Feature, mt:GeologicalEntity .
+mt:MineralOccurrence a owl:Class ; rdfs:label "Mineral occurrence"@en ; rdfs:subClassOf geo:Feature, mt:GeologicalEntity .
+mt:DepositEnvironment a owl:Class ; rdfs:label "Deposit environment"@en .
+mt:DepositGroup a owl:Class ; rdfs:label "Deposit group"@en .
+mt:DepositType a owl:Class ; rdfs:label "Deposit type"@en .
+mt:Commodity a owl:Class ; rdfs:label "Commodity"@en ; rdfs:subClassOf mt:GeologicalEntity .
+mt:Mineral a owl:Class ; rdfs:label "Mineral"@en ; rdfs:subClassOf mt:GeologicalEntity .
+mt:Mineralization a owl:Class ; rdfs:label "Mineralization"@en ; rdfs:subClassOf mt:GeologicalEntity .
+mt:GeologicalUnit a owl:Class ; rdfs:label "Geological unit"@en ; rdfs:subClassOf geo:Feature, mt:GeologicalEntity .
+mt:Lithology a owl:Class ; rdfs:label "Lithology"@en ; rdfs:subClassOf mt:GeologicalEntity .
+mt:GeologicalStructure a owl:Class ; rdfs:label "Geological structure"@en ; rdfs:subClassOf geo:Feature, mt:GeologicalEntity .
+mt:AlterationAssemblage a owl:Class ; rdfs:label "Alteration assemblage"@en ; rdfs:subClassOf mt:GeologicalEntity .
+mt:GeochemicalObservation a owl:Class ; rdfs:label "Geochemical observation"@en ; rdfs:subClassOf mt:GeologicalEntity .
+mt:Province a owl:Class ; rdfs:label "Geological province"@en ; rdfs:subClassOf geo:Feature .
+mt:District a owl:Class ; rdfs:label "District"@en ; rdfs:subClassOf geo:Feature .
+mt:StateOrTerritory a owl:Class ; rdfs:label "State or territory"@en ; rdfs:subClassOf geo:Feature .
+mt:EvidenceSource a owl:Class ; rdfs:label "Evidence source"@en ; rdfs:subClassOf prov:Entity .
+mt:EvidenceDocument a owl:Class ; rdfs:label "Evidence document"@en ; rdfs:subClassOf mt:EvidenceSource .
+mt:ReportPassage a owl:Class ; rdfs:label "Report passage"@en ; rdfs:subClassOf mt:EvidenceSource .
+mt:ExtractedClaim a owl:Class ; rdfs:label "Extracted claim"@en ; rdfs:subClassOf prov:Entity .
+mt:ExtractionActivity a owl:Class ; rdfs:label "Extraction activity"@en ; rdfs:subClassOf prov:Activity .
+mt:ModelElement a owl:Class ; rdfs:label "Digital-twin model element"@en .
+
+# Structured-data object properties
+mt:hasPrincipalEnvironment a owl:ObjectProperty ; rdfs:domain mt:MineralDeposit ; rdfs:range mt:DepositEnvironment ; rdfs:label "has principal environment"@en .
+mt:hasPrincipalGroup a owl:ObjectProperty ; rdfs:domain mt:MineralDeposit ; rdfs:range mt:DepositGroup ; rdfs:label "has principal group"@en .
+mt:hasDepositType a owl:ObjectProperty ; rdfs:domain mt:MineralDeposit ; rdfs:range mt:DepositType ; rdfs:label "has deposit type"@en .
+mt:containsCommodity a owl:ObjectProperty ; rdfs:domain mt:MineralDeposit ; rdfs:range mt:Commodity ; rdfs:label "contains commodity"@en .
+mt:locatedInProvince a owl:ObjectProperty ; rdfs:domain geo:Feature ; rdfs:range mt:Province ; rdfs:label "located in province"@en .
+mt:locatedInDistrict a owl:ObjectProperty ; rdfs:domain geo:Feature ; rdfs:range mt:District ; rdfs:label "located in district"@en .
+mt:locatedInState a owl:ObjectProperty ; rdfs:domain geo:Feature ; rdfs:range mt:StateOrTerritory ; rdfs:label "located in state or territory"@en .
+mt:hasHostRock a owl:ObjectProperty ; rdfs:domain mt:MineralDeposit ; rdfs:range mt:GeologicalUnit ; rdfs:label "has host rock"@en .
+mt:hasLithology a owl:ObjectProperty ; rdfs:domain mt:GeologicalUnit ; rdfs:range mt:Lithology ; rdfs:label "has lithology"@en .
+mt:hasAlteration a owl:ObjectProperty ; rdfs:domain mt:MineralDeposit ; rdfs:range mt:AlterationAssemblage ; rdfs:label "has alteration"@en .
+mt:mapsToModelElement a owl:ObjectProperty ; rdfs:domain geo:Feature ; rdfs:range mt:ModelElement ; rdfs:label "maps to model element"@en .
+
+# Report-derived semantic relationships
+mt:hostedBy a owl:ObjectProperty ; rdfs:label "hosted by"@en ; rdfs:range mt:GeologicalEntity .
+mt:associatedWithAlteration a owl:ObjectProperty ; rdfs:label "associated with alteration"@en ; rdfs:range mt:AlterationAssemblage .
+mt:controlledByStructure a owl:ObjectProperty ; rdfs:label "controlled by structure"@en ; rdfs:range mt:GeologicalStructure .
+mt:containsMineral a owl:ObjectProperty ; rdfs:label "contains mineral"@en ; rdfs:range mt:Mineral .
+mt:hasGeochemicalEvidence a owl:ObjectProperty ; rdfs:label "has geochemical evidence"@en ; rdfs:range mt:GeochemicalObservation .
+mt:mentionsEntity a owl:ObjectProperty ; rdfs:domain mt:ReportPassage ; rdfs:range mt:GeologicalEntity ; rdfs:label "mentions entity"@en .
+mt:supportedByPassage a owl:ObjectProperty ; rdfs:domain mt:ExtractedClaim ; rdfs:range mt:ReportPassage ; rdfs:label "supported by passage"@en .
+
+# Claim reification
+mt:claimSubject a owl:ObjectProperty ; rdfs:domain mt:ExtractedClaim ; rdfs:label "claim subject"@en .
+mt:claimPredicate a owl:ObjectProperty ; rdfs:domain mt:ExtractedClaim ; rdfs:range rdf:Property ; rdfs:label "claim predicate"@en .
+mt:claimObject a owl:ObjectProperty ; rdfs:domain mt:ExtractedClaim ; rdfs:label "claim object"@en .
+
+# Data properties
+mt:sourceRecordId a owl:DatatypeProperty ; rdfs:label "source record identifier"@en ; rdfs:range xsd:string .
+mt:commodityCode a owl:DatatypeProperty ; rdfs:domain mt:Commodity ; rdfs:range xsd:string ; rdfs:label "commodity code"@en .
+mt:alterationScope a owl:DatatypeProperty ; rdfs:domain mt:AlterationAssemblage ; rdfs:range xsd:string ; rdfs:label "alteration scope"@en .
+mt:hostRockOrder a owl:DatatypeProperty ; rdfs:domain mt:GeologicalUnit ; rdfs:range xsd:integer ; rdfs:label "host-rock order"@en .
+mt:geologicalAgeText a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "geological age text"@en .
+mt:gradeLi2OPercent a owl:DatatypeProperty ; rdfs:domain mt:MineralDeposit ; rdfs:range xsd:decimal ; rdfs:label "Li2O grade (%)"@en .
+mt:gradeCopperPercent a owl:DatatypeProperty ; rdfs:domain mt:MineralDeposit ; rdfs:range xsd:decimal ; rdfs:label "copper grade (%)"@en .
+mt:gradeNickelPercent a owl:DatatypeProperty ; rdfs:domain mt:MineralDeposit ; rdfs:range xsd:decimal ; rdfs:label "nickel grade (%)"@en .
+mt:endowmentLithiumMt a owl:DatatypeProperty ; rdfs:domain mt:MineralDeposit ; rdfs:range xsd:decimal ; rdfs:label "lithium endowment (Mt)"@en .
+mt:endowmentCopperMt a owl:DatatypeProperty ; rdfs:domain mt:MineralDeposit ; rdfs:range xsd:decimal ; rdfs:label "copper endowment (Mt)"@en .
+mt:endowmentNickelMt a owl:DatatypeProperty ; rdfs:domain mt:MineralDeposit ; rdfs:range xsd:decimal ; rdfs:label "nickel endowment (Mt)"@en .
+mt:confidenceScore a owl:DatatypeProperty ; rdfs:domain mt:ExtractedClaim ; rdfs:range xsd:decimal ; rdfs:label "confidence score"@en .
+mt:sourceText a owl:DatatypeProperty ; rdfs:domain mt:ExtractedClaim ; rdfs:range xsd:string ; rdfs:label "source text"@en .
+mt:pageNumber a owl:DatatypeProperty ; rdfs:domain mt:ReportPassage ; rdfs:range xsd:integer ; rdfs:label "page number"@en .
+mt:passageText a owl:DatatypeProperty ; rdfs:domain mt:ReportPassage ; rdfs:range xsd:string ; rdfs:label "passage text"@en .
+mt:documentFilename a owl:DatatypeProperty ; rdfs:domain mt:EvidenceDocument ; rdfs:range xsd:string ; rdfs:label "document filename"@en .
+mt:entityType a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "entity type"@en .
+mt:extractionMethod a owl:DatatypeProperty ; rdfs:domain mt:ExtractedClaim ; rdfs:range xsd:string ; rdfs:label "extraction method"@en .
+mt:reviewStatus a owl:DatatypeProperty ; rdfs:domain mt:ExtractedClaim ; rdfs:range xsd:string ; rdfs:label "review status"@en .
+mt:assayText a owl:DatatypeProperty ; rdfs:domain mt:GeochemicalObservation ; rdfs:range xsd:string ; rdfs:label "assay text"@en .

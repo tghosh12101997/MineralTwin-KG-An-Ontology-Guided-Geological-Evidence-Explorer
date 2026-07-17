@@ -1,0 +1,16 @@
+PREFIX mt: <https://w3id.org/mineraltwin/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?depositName ?unitName ?lithologyName
+WHERE {
+  ?deposit a mt:MineralDeposit ;
+           rdfs:label ?depositName ;
+           mt:hasHostRock ?hostRock .
+  OPTIONAL { ?hostRock rdfs:label ?unitName . }
+  OPTIONAL {
+    ?hostRock mt:hasLithology ?lithology .
+    ?lithology rdfs:label ?lithologyName .
+  }
+}
+ORDER BY ?depositName
+LIMIT 100
