@@ -65,31 +65,31 @@ The overview reports pipeline readiness, dataset coverage and the main semantic 
 
 The deposit explorer filters the Australian compilation by commodity, state, province and search term. It links map locations to structured deposit records, host-rock data, alteration assemblages and associated igneous rocks.
 
-![Deposit Explorer](img/Deposit explorer.jpg)
+![Deposit Explorer](img/Deposit.jpg)
 
 ### Geological Evidence Search
 
 Evidence search retrieves relevant report passages and shows the structured claims attached to each passage, including confidence, extraction method, page provenance and review status.
 
-![Geological Evidence Search](img/Evidence-Search.jpg)
+![Geological Evidence Search](img/Evidence.jpg)
 
 ### Knowledge Graph Workbench
 
 The workbench reports graph statistics, RDF type distributions and resource neighbourhoods, and supports read-only SPARQL competency queries.
 
-![Knowledge Graph Workbench](img/Knowledge-graph.jpg)
+![Knowledge Graph Workbench](img/Knowledge.jpg)
 
 ### Human review queue
 
 Low-confidence claims are not silently promoted into accepted geological knowledge. They are routed to a review queue where a reviewer can accept, reject or escalate them to a domain expert.
 
-![Claim Review Queue](img/Claim-Review.jpg)
+![Claim Review Queue](img/Claim.jpg)
 
 ### Conceptual 3D model inputs
 
 The 3D view displays the GemPy surface points, orientations, formations and fault observations used as modelling evidence. The current release visualises inputs; it does not yet execute full implicit geological interpolation.
 
-![Conceptual 3D Model Inputs](img/3d-model-inputs.jpg)
+![Conceptual 3D Model Inputs](img/model.jpg)
 
 ### Methods and reproducibility
 
