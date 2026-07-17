@@ -59,19 +59,19 @@ These values are generated outputs, not fixed project constants. They may change
 
 The overview reports pipeline readiness, dataset coverage and the main semantic workflow.
 
-![MineralTwin-KG overview](img/overview.jpg)
+![MineralTwin-KG overview](img/Overview.jpg)
 
 ### Deposit Explorer
 
 The deposit explorer filters the Australian compilation by commodity, state, province and search term. It links map locations to structured deposit records, host-rock data, alteration assemblages and associated igneous rocks.
 
-![Deposit Explorer](img/deposit-explorer.jpg)
+![Deposit Explorer](img/Deposit-explorer.jpg)
 
 ### Geological Evidence Search
 
 Evidence search retrieves relevant report passages and shows the structured claims attached to each passage, including confidence, extraction method, page provenance and review status.
 
-![Geological Evidence Search](img/evidence-search.jpg)
+![Geological Evidence Search](img/Evidence-Search.jpg)
 
 ### Knowledge Graph Workbench
 
